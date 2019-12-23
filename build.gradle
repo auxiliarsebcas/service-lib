@@ -2,10 +2,11 @@ plugins {
     id 'java-library'
     id 'idea'
     id 'application'
+    id 'maven-publish'
 }
 
 group = 'jobsity.test'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 repositories {
     jcenter()
@@ -15,8 +16,22 @@ repositories {
 dependencies {
     implementation 'com.google.guava:guava:27.0.1-jre'
     implementation 'io.vavr:vavr:0.9.3'
-    
+    implementation 'com.oath.cyclops:cyclops:10.3.0'
+    implementation 'com.oath.cyclops:cyclops-anym:10.3.0'
+
     testImplementation 'junit:junit:4.12'
 }
 
 mainClassName = 'jobsity.test.App'
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId 'jobsity.test'
+            artifactId 'service-lib'
+            version '0.0.1'
+        }
+    }
+}
