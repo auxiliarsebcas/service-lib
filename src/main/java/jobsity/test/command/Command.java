@@ -12,5 +12,5 @@ import java.util.List;
 
 
 public interface Command {
-    public Reader<Environment, EitherT<future,List<ServiceError>,List<Event>>> execute();
+    public <Env> Reader<Env, EitherT<future,List<ServiceError>,List<Event>>> execute();
 }
