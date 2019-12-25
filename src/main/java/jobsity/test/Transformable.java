@@ -1,5 +1,5 @@
 package jobsity.test;
 
-public interface Transformer<A,B> {
+public interface Transformable<A,B> {
     public B trasform(A a);
 }
