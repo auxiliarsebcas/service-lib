@@ -19,6 +19,8 @@ dependencies {
     implementation 'com.oath.cyclops:cyclops:10.3.0'
     implementation 'com.oath.cyclops:cyclops-anym:10.3.0'
 
+    implementation 'io.grpc:grpc-protobuf:1.26.0'
+
     testImplementation 'junit:junit:4.12'
 }
 
