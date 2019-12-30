@@ -1,6 +1,6 @@
 package jobsity.test;
 
-public final class Event {
+public class Event {
     public final String topic;
 
     public Event(String topic) {
